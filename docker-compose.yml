@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - WATCHFILES_USE_POLLING=true
+      - DEBUG=True
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./eventeria-frontend:/app
+      - /app/node_modules
+    depends_on:
+      - eventeria-backend
+      - redis
+      - postgres
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Helps file watching in Docker?
+      - NODE_ENV=development
