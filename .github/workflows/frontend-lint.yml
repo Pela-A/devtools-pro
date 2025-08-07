@@ -16,7 +16,7 @@ jobs:
       run:
         working-directory: frontend
 
-    # Workflow goes through these steps or processes in order. If any fail we don't push
+    # Workflow goes through these steps or processes in order. If any fail the workflow fails, letting us see.
     steps:
       - name: Checkout code
         uses: actions/checkout@v3

@@ -16,12 +16,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./eventeria-frontend:/app
+      - ./frontend:/app
       - /app/node_modules
-    depends_on:
-      - eventeria-backend
-      - redis
-      - postgres
     environment:
       - CHOKIDAR_USEPOLLING=true  # Helps file watching in Docker?
       - NODE_ENV=development
