@@ -13,7 +13,9 @@ function App() {
       {/* Free tools */}
       <div>
         <h2>UUID Generator (Single)</h2>
-        <button onClick={() => alert('Your UUID: ' + crypto.randomUUID())}>Generate UUID</button>
+        <button onClick={() => alert('Your UUID: ' + crypto.randomUUID())}>
+          Generate UUID
+        </button>
       </div>
 
       {/* Premium */}

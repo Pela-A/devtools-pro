@@ -14,9 +14,18 @@ export default function BulkUUIDGenerator() {
   return (
     <div>
       <h2>Bulk UUID Generator</h2>
-      <input type="number" value={count} onChange={e => setCount(Number(e.target.value))} min={1} />
+      <input
+        type="number"
+        value={count}
+        onChange={(e) => setCount(Number(e.target.value))}
+        min={1}
+      />
       <button onClick={generate}>Generate</button>
-      <ul>{uuids.map(u => <li key={u}>{u}</li>)}</ul>
+      <ul>
+        {uuids.map((u) => (
+          <li key={u}>{u}</li>
+        ))}
+      </ul>
     </div>
   );
 }
