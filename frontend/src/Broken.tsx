@@ -5,6 +5,8 @@ const Broken = () => {
   //   const test = '';
   console.log();
 
+  console.log('hello');
+
   const test = '';
   return <div>Lint me!</div>;
 };

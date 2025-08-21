@@ -71,3 +71,34 @@ install Prettier and ESLint vscode extension
 npm run lint
 
 npm run format
+
+
+## W6 Additions
+
+Integrated with Stripe to handle transactions.
+
+Required steps were installing dependencies for front end project and python project.
+
+Once done, we will first handle logic on our backend.
+
+### Backend work
+
+Need to make sure Stripe is in our list of dependencies.
+
+On our stripe account, we want to find our sk and add it to our settings.py
+
+Create a view for payment intent inside a django app.
+
+backend -> api -> views.py
+
+Add view as a path in our urls.py so that url can be queried
+
+### Frontend work
+
+Make sure we have installed stripe package
+
+Create features you plan on having behind a paywall versus not.
+
+Lock premium feature behind use state.
+
+Then create premium checkout form using stripe information and create an async request to backend. Backend will validate with stripe, and if successful, tell the client it was successful
